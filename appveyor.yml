@@ -7,8 +7,3 @@ clone_depth: 1
 
 nuget:
   project_feed: true
-
-init:
-  - git config --global core.autocrlf input
-
-configuration: Release
