@@ -10,8 +10,7 @@ nuget:
 
 deploy:
   - provider: NuGet
-    api_key:
-      secure: oy2irpe5btnw6rztwtxqdyxkbmh44u5u7kvaoodq72x44u
+    api_key: $(NuGetApiKey)
     
 
 before_build:
