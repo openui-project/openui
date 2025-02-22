@@ -1,5 +1,7 @@
 <Project>
   <PropertyGroup>
     <Authors></Authors>
+    <PackageIcon></PackageIcon>
+    <PackageTags></PackageTags>
   </PropertyGroup>
 </Project>
