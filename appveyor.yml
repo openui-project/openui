@@ -15,7 +15,7 @@ configuration: Release
 
 build_script:
   - dotnet restore
-  - dotnet build
+  - dotnet build --no-restore
 
 test_script:
   - dotnet run --project OpenUI-Test
