@@ -5,6 +5,15 @@ version: 1.0.{build}
 
 clone_depth: 1
 
+nuget:
+  project_feed: true
+
+deploy:
+  - provider: NuGet
+    api_key:
+      secure: oy2irpe5btnw6rztwtxqdyxkbmh44u5u7kvaoodq72x44u
+    
+
 before_build:
   - ps: dotnet restore
 
