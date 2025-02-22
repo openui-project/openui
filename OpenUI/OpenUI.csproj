@@ -6,6 +6,12 @@
     <AssemblyName>OpenUI</AssemblyName>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PublishTrimmed>false</PublishTrimmed>
+    <PublishReadyToRun>false</PublishReadyToRun>
+  </PropertyGroup>
+
   <Import Project="./Build.props" />
 
 </Project>
