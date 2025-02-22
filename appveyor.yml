@@ -12,3 +12,10 @@ init:
   - git config --global core.autocrlf input
 
 configuration: Release
+
+build_script:
+  - dotnet restore
+  - dotnet build
+
+test_script:
+  - dotnet run --project OpenUI-Test
