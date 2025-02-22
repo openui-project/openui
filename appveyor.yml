@@ -5,17 +5,11 @@ version: 1.0.{build}
 
 clone_depth: 1
 
-nuget:
-  project_feed: true
-
-init:
-  - git config --global core.autocrlf input
-
-configuration: Release
+before_build:
+  - ps: dotnet restore
 
 build_script:
-  - dotnet restore
-  - dotnet build --no-restore
-
+  - ps: dotnet build --no-restore
+  
 test_script:
-  - dotnet run --project OpenUI-Test
+  - ps: dotnet run --project OpenUI-Test
