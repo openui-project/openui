@@ -1,0 +1,7 @@
+# Byte-compiled files
+
+# Distribution / packaging
+
+# Editor specific
+*~
+.vscode/
