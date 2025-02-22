@@ -1,4 +1,9 @@
 # Byte-compiled files
+OpenUI/obj/
+OpenUI/bin/
+
+OpenUI-Test/obj/
+OpenUI-Test/bin/
 
 # Distribution / packaging
 

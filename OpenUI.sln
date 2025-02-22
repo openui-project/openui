@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenUI", "OpenUI\OpenUI.csproj", "{CBA7A571-4F11-44BC-8AFA-E4F86E12002B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenUI-Test", "OpenUI-Test\OpenUI-Test.csproj", "{748DFD31-3245-4521-84C3-289C4482373B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBA7A571-4F11-44BC-8AFA-E4F86E12002B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA7A571-4F11-44BC-8AFA-E4F86E12002B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA7A571-4F11-44BC-8AFA-E4F86E12002B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA7A571-4F11-44BC-8AFA-E4F86E12002B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{748DFD31-3245-4521-84C3-289C4482373B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{748DFD31-3245-4521-84C3-289C4482373B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{748DFD31-3245-4521-84C3-289C4482373B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{748DFD31-3245-4521-84C3-289C4482373B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
