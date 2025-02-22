@@ -2,6 +2,9 @@
   <PropertyGroup>
     <Authors></Authors>
     <PackageIcon></PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags></PackageTags>
+    <RepositoryUrl>https://github.com/openui-project/openui</RepositoryUrl>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 </Project>
