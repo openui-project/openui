@@ -1,17 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>OpenUI</RootNamespace>
-    <AssemblyName>OpenUI</AssemblyName>
-  </PropertyGroup>
-
-  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PublishTrimmed>false</PublishTrimmed>
-    <PublishReadyToRun>false</PublishReadyToRun>
   </PropertyGroup>
 
-  <Import Project="./Build.props" />
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="OpenTK" Version="4.9.3" />
+  </ItemGroup>
+  
+  <Import Project="./Build.props" />
 </Project>

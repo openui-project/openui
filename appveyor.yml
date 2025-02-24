@@ -3,13 +3,21 @@ image:
 
 version: 1.0.0.{build}
 
-clone_depth: 1
+deploy:
+  - provider: NuGet
+    symbol_server: https://ci.appveyor.com/nuget/openui-8n3b0ixe54w9/api/v2/package
+    api_key: $(NuGetApiKey)
+    artifact: /.*\.nupkg/
 
-before_build:
-  - ps: dotnet restore
+artifacts:
+  - path: nupkg\*.nupkg
+    name: NuGet Package
 
 build_script:
-  - ps: dotnet build --no-restore
-  
+  - ps: dotnet build --configuration Release
+
 test_script:
   - ps: dotnet run --project OpenUI-Test
+
+before_package:
+  - ps: dotnet pack --configuration Release --output nupkg

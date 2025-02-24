@@ -1,10 +1,15 @@
 <Project>
   <PropertyGroup>
-    <Authors></Authors>
-    <PackageIcon></PackageIcon>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageTags></PackageTags>
+    <!-- Project Metadata -->
+    <AssemblyName>OpenUI</AssemblyName>
     <RepositoryUrl>https://github.com/openui-project/openui</RepositoryUrl>
+
+    <!-- NuGet Package Information -->
+    <PackageId>OpenUI</PackageId>
     <Version>1.0.0</Version>
+    <Description></Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon></PackageIcon>
+    <PackageTags></PackageTags>
   </PropertyGroup>
 </Project>
