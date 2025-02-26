@@ -8,10 +8,5 @@ namespace OpenUI
         {
             WinAPI.MessageBox(IntPtr.Zero, "Hello, World!", "WinAPI in C#", 0);
         }
-
-        public Vector2 GetWindowPosition()
-        {
-            return new Vector2(0, 0);
-        }
     }
 }
