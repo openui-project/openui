@@ -9,10 +9,6 @@
   <ItemGroup>
     <None Include="../README.md" Pack="true" PackagePath="" />
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="OpenTK" Version="4.9.3" />
-  </ItemGroup>
   
   <Import Project="./Build.props" />
 </Project>

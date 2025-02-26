@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using OpenUI;
+
+public static class Program
+{
+    public static void Main(string[] args)
+    {
+        var view = new ViewPort(800, 600, "Simpile Example");
+    }
+}
