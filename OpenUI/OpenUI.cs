@@ -6,7 +6,9 @@ namespace OpenUI
     {
         public ViewPort(int width, int height, string title)
         {
-            WinAPI.MessageBox(IntPtr.Zero, "Hello, World!", "WinAPI in C#", 0);
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) {
+                WinAPI.MessageBox(IntPtr.Zero, "Hello, World!", "WinAPI in C#", 0);
+            } 
         }
     }
 }
