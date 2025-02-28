@@ -8,6 +8,7 @@
     <PackageId>OpenUI</PackageId>
     <Version>1.0.0</Version>
     <Description></Description>
+		<Copyright></Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon></PackageIcon>
     <PackageTags></PackageTags>
