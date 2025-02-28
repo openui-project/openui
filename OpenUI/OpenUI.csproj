@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0;net8.0-windows</TargetFrameworks>
+		<!--<TargetFrameworks>net8.0;net8.0-windows</TargetFrameworks> -->
+		<TargetFramework>net8.0</TargetFramework>
     <RootNamespace>OpenUI</RootNamespace>
     <Configuration>Release</Configuration>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
