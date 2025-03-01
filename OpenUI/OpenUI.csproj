@@ -13,4 +13,8 @@
   </ItemGroup>
   
   <Import Project="./Build.props" />
+
+  <ItemGroup Condition="'$(OS)' == 'Windows_NT'">
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="(9.0.0,]" />
+  </ItemGroup>
 </Project>

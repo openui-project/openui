@@ -2,9 +2,7 @@
 
 public static class Program
 {
-    public static void Main(string[] args)
-    {
-			var view = new ViewPort();
-			Console.WriteLine("Hello, World!");
+    public static void Main(string[] args) {
+        var view = new ViewPort(800, 600, "Simpile Example");
     }
 }
