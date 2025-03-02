@@ -1,6 +1,8 @@
 # Byte-compiled files
 src/OpenUI/obj/
 src/OpenUI/bin/
+src/OpenUI.Mathematics/obj
+src/OpenUI.Mathematics/bin
 
 test/LocalTest/obj
 test/LocalTest/bin
