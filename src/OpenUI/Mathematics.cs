@@ -10,6 +10,8 @@ namespace OpenUI.Mathematics {
       Y = y;
     }
 
+		public static Vector2 Zero { get; private set; } = new Vector2(0, 0);
+
     public static readonly int SizeInBytes = Unsafe.SizeOf<Vector2>();
 
     public override string ToString() => $"({X}, {Y})";

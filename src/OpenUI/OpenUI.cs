@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 
 #if WINDOWS
@@ -7,9 +8,11 @@ using System.Windows.Forms;
 
 namespace OpenUI
 {
-
 	/// <summary>
-	/// The <c>ViewPort</c> class represents the main window of the application, acting as the primary container for rendering and user interaction. It manages the window's size, position, and overall layout, handling events such as resizing, input handling, and refreshing the display. This class provides the foundation for rendering graphical content and serves as the central interface between the application and the user.
+	/// The <c>ViewPort</c> class represents the main window of the application, acting as the primary container 
+	/// for rendering and user interaction. It manages the window's size, position, and overall layout, handling 
+	/// events such as resizing, input handling, and refreshing the display. This class provides the foundation 
+	/// for rendering graphical content and serves as the central interface between the application and the user.
 	/// </summary>
 	public class ViewPort
 	{
@@ -20,9 +23,9 @@ namespace OpenUI
 #if WINDOWS
 			mainWindow = new Form
 			{
-				ClientSize = new System.Drawing.Size(width, height),
+				ClientSize = new Size(width, height),
 				Text = title,
-				BackColor = System.Drawing.Color.Black,
+				BackColor = Color.Black
 			};
 #endif
 		}
@@ -30,9 +33,10 @@ namespace OpenUI
 		public Mathematics.Vector2 GetWindowPosition() 
 		{
 #if WINDOWS
-			float left = ((Form)mainWindow).Left; 
-			float top = ((Form)mainWindow).Top;
-			return new Mathematics.Vector2(left, top);
+			var form = (Form)mainWindow;
+			return new Mathematics.Vector2(form.Left, form.Top);
+#else
+			return default;
 #endif
 		}
 
