@@ -3,6 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>net8.0-windows</TargetFrameworks>
 		<RootNamespace>OpenUI</RootNamespace>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Configuration>Release</Configuration>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
