@@ -22,10 +22,13 @@ namespace OpenUI
 	public class ViewPort {
 		private object mainWindow;
 
-		public ViewPort(int width, int height, string title) {
+		public ViewPort(int width, int height, string title = "OpenUI") {
 #if WINDOWS
-			mainWindow = new Form();
-			((Form)mainWindow).ClientSize = new System.Drawing.Size(width, height);
+			mainWindow = new Form
+			{
+				ClientSize = new System.Drawing.Size(width, height),
+				Text = title
+			};
 #endif
 		}
 
