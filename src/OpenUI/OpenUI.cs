@@ -20,15 +20,20 @@ namespace OpenUI
 	/// The <c>ViewPort</c> class represents the main window of the application, acting as the primary container for rendering and user interaction. It manages the window's size, position, and overall layout, handling events such as resizing, input handling, and refreshing the display. This class provides the foundation for rendering graphical content and serves as the central interface between the application and the user.
 	/// </summary>
 	public class ViewPort {
-		private object _Window;
+		private object mainWindow;
+
 		public ViewPort(int width, int height, string title) {
-			if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) {
-				_Window = new Form();
-			}
+#if WINDOWS
+			mainWindow = new Form();
+			((Form)mainWindow).ClientSize = new System.Drawing.Size(width, height);
+#endif
 		}
 
-		public void Notify() {
-			return;
+		public void Run() {
+#if WINDOWS
+			((Form)mainWindow).Show();
+			Application.Run((Form)mainWindow);
+#endif
 		}
 	}
 }
