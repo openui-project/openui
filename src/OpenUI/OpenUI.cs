@@ -27,6 +27,15 @@ namespace OpenUI
 #endif
 		}
 
+		public Mathematics.Vector2 GetWindowPosition() 
+		{
+#if WINDOWS
+			float left = ((Form)mainWindow).Left; 
+			float top = ((Form)mainWindow).Top;
+			return new Mathematics.Vector2(left, top);
+#endif
+		}
+
 		public void Run()
 		{
 #if WINDOWS
