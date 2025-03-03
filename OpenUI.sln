@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D758225D-A1B9-4C05-A07E-95572B689D4A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{824E34A0-D3FC-4925-B2A2-57953EFA5ABA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenUI", "src\OpenUI\OpenUI.csproj", "{9382A837-CC98-404E-B227-9A5EE4A93DA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenUI.Graphics", "src\OpenUI.Graphics\OpenUI.Graphics.csproj", "{5BF22F9D-AF1C-434B-AB0A-2E51327C59C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,12 +16,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9382A837-CC98-404E-B227-9A5EE4A93DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9382A837-CC98-404E-B227-9A5EE4A93DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9382A837-CC98-404E-B227-9A5EE4A93DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9382A837-CC98-404E-B227-9A5EE4A93DA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BF22F9D-AF1C-434B-AB0A-2E51327C59C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BF22F9D-AF1C-434B-AB0A-2E51327C59C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BF22F9D-AF1C-434B-AB0A-2E51327C59C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BF22F9D-AF1C-434B-AB0A-2E51327C59C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9382A837-CC98-404E-B227-9A5EE4A93DA3} = {D758225D-A1B9-4C05-A07E-95572B689D4A}
+		{5BF22F9D-AF1C-434B-AB0A-2E51327C59C3} = {824E34A0-D3FC-4925-B2A2-57953EFA5ABA}
 	EndGlobalSection
 EndGlobal

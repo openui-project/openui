@@ -1,11 +1,12 @@
 # Byte-compiled files
-src/OpenUI/obj/
-src/OpenUI/bin/
+src/OpenUI.Graphics/obj
+src/OpenUI.Graphics/bin
 
 test/LocalTest/obj
 test/LocalTest/bin
 
 # Distribution / packaging
+bin/*
 
 # Editor specific
 *~
