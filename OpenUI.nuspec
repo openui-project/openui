@@ -1,6 +1,19 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<id>OpenUI</id>
+		<version>1.0.1</version>
+		<authors>OpenUI</authors>
+		<!--<owners></owners> -->
+		<licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+		<projectUrl>https://github.com/openui-project/openui</projectUrl>
+		<iconUrl>https://github.com/openui-project/openui</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>The OpenUI Project</description>
+		<dependencies>
+			<dependency id="OpenUI.Graphics" version="1.0.0" />
+		</dependencies>
+		<!-- <copyright />
+		<tags /> -->
 	</metadata>
 </package>
