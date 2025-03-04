@@ -6,7 +6,7 @@
 		<authors>OpenUI</authors>
 		<!--<owners></owners> -->
 		<licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
-		<projectUrl>https://github.com/openui-project/openui</projectUrl>
+		<repositoryUrl>https://github.com/openui-project/openui</repositoryUrl>
 		<iconUrl>https://github.com/openui-project/openui</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>The OpenUI Project</description>
