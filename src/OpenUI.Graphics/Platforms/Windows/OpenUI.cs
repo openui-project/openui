@@ -4,17 +4,11 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
 namespace OpenUI {
-    /// <summary>
-	/// The <c>ViewPort</c> class represents the main window of the application, acting as the primary container 
-	/// for rendering and user interaction. It manages the window's size, position, and overall layout, handling 
-	/// events such as resizing, input handling, and refreshing the display. This class provides the foundation 
-	/// for rendering graphical content and serves as the central interface between the application and the user.
-	/// </summary>
-    public class ViewPort {
-        private Form mainWindow;
+    public partial class ViewPort {
+        private Form form;
 
         public ViewPort(int width, int height, string title) {
-            mainWindow = new Form
+            form = new Form
 			{
 				ClientSize = new Size(width, height),
 				Text = title,
@@ -23,8 +17,8 @@ namespace OpenUI {
         }
 
         public void Run() {
-            mainWindow.Show();
-            Application.Run(mainWindow);
+            form.Show();
+            Application.Run(form);
         }
     }
 }
