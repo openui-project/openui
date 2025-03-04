@@ -5,9 +5,5 @@ namespace OpenUI {
 	/// events such as resizing, input handling, and refreshing the display. This class provides the foundation 
 	/// for rendering graphical content and serves as the central interface between the application and the user.
 	/// </summary>
-    public partial class ViewPort {
-        public ViewPort(int width, int height, string title);
-
-        public void Run();
-    }
+    public partial class ViewPort;
 }

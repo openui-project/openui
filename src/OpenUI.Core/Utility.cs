@@ -1,7 +1,7 @@
 using System;
 
 namespace OpenUI.Core {
-    internal static class Utility {
+    public static class Utility {
         public static void TraceLog(int level, string text, params object[] args) {
             // If the log level is None, we don't log anything.
             if (level == 4)
