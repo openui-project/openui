@@ -16,7 +16,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="**\*.cs" Exclude="Platforms\**\*.cs" />
     <Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'" Include="Platforms\Windows\*.cs" />
+    <Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="Platforms\iOS\*.cs" />
+    <Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'" Include="Platforms\Android\*.cs" />
   </ItemGroup>
 
 </Project>
