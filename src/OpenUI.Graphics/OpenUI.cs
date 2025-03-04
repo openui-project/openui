@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 #endif
 
-namespace OpenUI
+namespace OpenUI.Graphics
 {
 	/// <summary>
 	/// The <c>ViewPort</c> class represents the main window of the application, acting as the primary container 
