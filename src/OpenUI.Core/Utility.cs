@@ -2,9 +2,9 @@ using System;
 
 namespace OpenUI.Core {
     public static class Utility {
-        public static void TraceLog(int level, string? text, params object[] args) {
+        public static void TraceLog(int level, string text, params object[] args) {
             // If the log level is None, we don't log anything.
-            if (level == 4 || text == null)
+            if (level == 4)
                 return;
 
             string message = string.Format(text, args);
