@@ -16,10 +16,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OpenUI.Core\OpenUI.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Include="**\*.cs" Exclude="Platforms\**\*.cs" />
     <Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'" Include="Platforms\Windows\*.cs" />
     <!-- <Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="Platforms\iOS\*.cs" />
