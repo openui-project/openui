@@ -4,10 +4,16 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
 namespace OpenUI {
-    public partial class ViewPort {
+    /// <summary>
+	/// The <c>GameWindow</c> class represents the main window of the application, acting as the primary container 
+	/// for rendering and user interaction. It manages the window's size, position, and overall layout, handling 
+	/// events such as resizing, input handling, and refreshing the display. This class provides the foundation 
+	/// for rendering graphical content and serves as the central interface between the application and the user.
+	/// </summary>
+    public class GameWindow {
         private Form form;
 
-        public ViewPort(int width, int height, string title) {
+        public GameWindow(int width, int height, string title) {
             form = new Form
 			{
 				ClientSize = new Size(width, height),
@@ -16,7 +22,7 @@ namespace OpenUI {
 		    };
         }
 
-        public void Run() {
+        public void Begin() {
 			form.Show();
             Application.Run(form);
         }

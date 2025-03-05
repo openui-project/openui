@@ -2,7 +2,7 @@
 
 public static class Program {
 	public static void Main(string[] args) {
-		var view = new ViewPort(800, 600, "Simple Application");
-		view.Run();
+		var view = new GameWindow(800, 600, "Simpile Application");
+		view.Begin();
 	}
 }
