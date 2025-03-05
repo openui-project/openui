@@ -3,6 +3,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+using Utility = OpenUI.Core.Utility;
+
 namespace OpenUI {
     public partial class ViewPort {
         private Form form;
@@ -17,8 +19,10 @@ namespace OpenUI {
         }
 
         public void Run() {
+			Utility.TraceLog(0, "Starting application...");
             form.Show();
             Application.Run(form);
+			Utility.TraceLog(0, "Application terminated.");
         }
     }
 }
