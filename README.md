@@ -4,7 +4,7 @@
 
 ## Installation
 
-OpenUI is available via `NuGet`. To install the latest version of OpenUI, simply run:
+OpenUI is available via `NuGet`. To install the latest version of OpenUI, simply run the following command:
 
 ```bat
 Install-Package OpenUI
@@ -19,10 +19,12 @@ Here’s a simple example that demonstrates how to create a window:
 ```cs
 using OpenUI;
 
-public static class Program {
-    public static void Main(string[] args) {
-        var view = new ViewPort(800, 600, "Simpile Example");
-        view.Run();
+public static class Program
+{
+    public static void Main(string[] args)
+    {
+        var window = new GameWindow(800, 600, "Simpile Example");
+        window.Show();
     }
 }
 ```
