@@ -24,7 +24,7 @@ namespace OpenUI {
 		    };
         }
 
-        public void Begin() {
+        public void Run() {
             Utility.TraceLog(LogLevel.Info, "Starting application...");
 			form.Show();
             Application.Run(form);
