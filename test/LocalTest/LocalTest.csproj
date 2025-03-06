@@ -2,7 +2,6 @@
 
   <ItemGroup>
 		<ProjectReference Include="..\..\src\OpenUI.Graphics\OpenUI.Graphics.csproj" />
-    <ProjectReference Include="..\..\src\OpenUI.Core\OpenUI.Core.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

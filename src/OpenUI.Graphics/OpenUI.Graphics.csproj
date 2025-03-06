@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0-windows</TargetFrameworks>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows</TargetFrameworks>
     <RootNamespace>OpenUI.Graphics</RootNamespace>
     <NoWarn>$(NoWarn);1591</NoWarn>
-    <Version>1.0.1</Version>
+    <Version>1.0.2-beta</Version>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
@@ -15,13 +16,16 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\OpenUI.Core\OpenUI.Core.csproj" />
-  </ItemGroup>
+  <!-- <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'linux'">
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+  </PropertyGroup> -->
 
   <ItemGroup>
     <Compile Include="**\*.cs" Exclude="Platforms\**\*.cs" />
     <Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'" Include="Platforms\Windows\*.cs" />
+    <Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'linux'" Include="Platforms\Linux\*.cs" />
   </ItemGroup>
+
+  <!-- <Import Project="./Build.props" /> -->
 
 </Project>

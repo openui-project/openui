@@ -1,11 +1,6 @@
 # Byte-compiled files
-src/OpenUI.Graphics/obj
-src/OpenUI.Graphics/bin
-src/OpenUI.Core/obj
-src/OpenUI.Core/bin
-
-test/LocalTest/obj
-test/LocalTest/bin
+[Bb]in/
+[Oo]bj/
 
 # Distribution / packaging
 bin/*
