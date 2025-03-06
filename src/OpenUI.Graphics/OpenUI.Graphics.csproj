@@ -1,12 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks></TargetFrameworks>
     <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows</TargetFrameworks>
     <RootNamespace>OpenUI.Graphics</RootNamespace>
-    <NoWarn>$(NoWarn);1591</NoWarn>
     <Version>1.0.2-beta</Version>
     <Description>OpenUI.Graphics is the backend framework for OpenUI, handling rendering and graphical operations.</Description>
+    <NoWarn>$(NoWarn);1591</NoWarn>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
     <!-- <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion> -->
@@ -17,14 +18,9 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
-  <!-- <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'linux'">
-    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
-  </PropertyGroup> -->
-
   <ItemGroup>
     <Compile Include="**\*.cs" Exclude="Platforms\**\*.cs" />
     <Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'" Include="Platforms\Windows\*.cs" />
-    <Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'linux'" Include="Platforms\Linux\*.cs" />
   </ItemGroup>
 
   <!-- <Import Project="./Build.props" /> -->
