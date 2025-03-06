@@ -1,20 +1,48 @@
+<!-- <p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/openui-project/openui/main/assets/pygdk_logo_dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openui-project/openui/main/assets/pygdk_logo_light.png">
+    <img src="https://raw.githubusercontent.com/openui-project/openui/main/assets/pygdk_logo_light.png">
+  </picture>
+</p> -->
+
 # OpenUI
 
 **OpenUI** is a lightweight C# library for building modern, interactive graphical user interfaces with simplicity and flexibility.
 
-## Installation
+## Installation - NuGet
 
-OpenUI is available via `NuGet`. To install the latest version of OpenUI, simply run the following command:
+The easiest way to get started is through NuGet.
+
+1. Choose a folder where you’d like to start your OpenUI project. For example, "MyOpenUIProject".
+2. Open a terminal (e.g., Visual Studio terminal) in the directory and execute the following commands. Make sure .NET is already installed:
 
 ```bat
-Install-Package OpenUI
+dotnet new console
 ```
 
-Once installed, you can import the library into your C# code to start creating your GUI applications.
+```bat
+dotnet add package OpenUI
+```
 
-📜 Quick Start
+## Installation - Manual Setup
 
-Here’s a quick example that demonstrates how to create a window:
+1. Clone the repository:
+
+```bat
+git clone https://github.com/openui-project/openui.git
+```
+
+2. Navigate to the `src` directory:
+```bat
+cd openui/src
+```
+
+3. Add all the `.csproj` files from the folders within the `src` directory to your project.
+
+## Quick Start
+
+Here's a quick example demonstrating how to create a window:
 
 ```cs
 using OpenUI;
