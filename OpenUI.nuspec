@@ -11,7 +11,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>The OpenUI Project</description>
 		<dependencies>
-			<dependency id="OpenUI.Graphics" version="1.0.0" />
+			<dependency id="OpenUI.Graphics" version="1.0.1" />
 		</dependencies>
 		<!-- <copyright />
 		<tags /> -->

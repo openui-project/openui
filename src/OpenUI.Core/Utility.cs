@@ -2,41 +2,39 @@
 
 namespace OpenUI {
     public enum LogLevel {
-        Info = 0,
+        None = 0,
+        Info,
         Warning,
-        Error,
-        Fatal
+        Error
+        //Fatal
     }
 }
 
 namespace OpenUI.Core {
     public static class Utility {
-        private static bool isDebug = true;
-
-        public static void SetDebugMode(bool enabled) {
-            isDebug = enabled;
-        }
 
         public static void TraceLog(LogLevel level, string text, params object[] args) {
-            if (isDebug)
+            if (level == LogLevel.None)
                 return;
 
             string message = string.Format(text, args);
 
-            switch (level) 
+            switch (level)
             {
                 case LogLevel.Info:
-                    Console.WriteLine($"[INFO] {message}");
+                    Console.WriteLine(message);
                     break;
                 case LogLevel.Warning:
-                    Console.WriteLine($"[WARNING] {message}");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(message);
+                    Console.ResetColor();
                     break;
                 case LogLevel.Error:
-                    Console.Error.WriteLine($"[ERROR] {message}");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Error.WriteLine(message);
+                    Console.ResetColor();
                     break;
-                case LogLevel.Fatal:
-                    throw new Exception($"[FATAL] {message}");
             }
-        }
+        }     
     }
 }
