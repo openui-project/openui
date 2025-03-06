@@ -4,6 +4,7 @@
     <TargetFrameworks>net8.0-windows</TargetFrameworks>
     <RootNamespace>OpenUI.Graphics</RootNamespace>
     <NoWarn>$(NoWarn);1591</NoWarn>
+    <Version>1.0.1</Version>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     
