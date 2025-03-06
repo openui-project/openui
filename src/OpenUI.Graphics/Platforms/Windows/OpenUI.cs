@@ -15,7 +15,7 @@ namespace OpenUI {
     public class GameWindow {
         private Form form;
 
-        public GameWindow(int width, int height) {
+        public GameWindow(int width, int height, string title) {
             form = new Form
 			{
 				ClientSize = new Size(width, height),
