@@ -3,6 +3,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+using Utility = OpenUI.Core.Utility;
+
 namespace OpenUI {
     /// <summary>
 	/// The <c>GameWindow</c> class represents the main window of the application, acting as the primary container 
@@ -23,8 +25,10 @@ namespace OpenUI {
         }
 
         public void Begin() {
+            Utility.TraceLog(LogLevel.Info, "Starting application...");
 			form.Show();
             Application.Run(form);
+            Utility.TraceLog(LogLevel.Info, "Application terminated.");
         }
     }
 }

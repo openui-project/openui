@@ -11,17 +11,17 @@ namespace OpenUI {
 
 namespace OpenUI.Core {
     public static class Utility {
-        private bool isDebug = true;
+        private static bool isDebug = true;
 
         public static void SetDebugMode(bool enabled) {
             isDebug = enabled;
         }
 
-        public static void TraceLog(LogLevel level, string message, params object[] args) {
-            if (isDebug == false) 
+        public static void TraceLog(LogLevel level, string text, params object[] args) {
+            if (isDebug)
                 return;
-            
-            string message = string.Format(message, args);
+
+            string message = string.Format(text, args);
 
             switch (level) 
             {
