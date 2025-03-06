@@ -12,9 +12,9 @@ Install-Package OpenUI
 
 Once installed, you can import the library into your C# code to start creating your GUI applications.
 
-## Basic Example
+📜 Quick Start
 
-Here’s a simple example that demonstrates how to create a window:
+Here’s a quick example that demonstrates how to create a window:
 
 ```cs
 using OpenUI;
