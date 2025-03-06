@@ -1,20 +1,19 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<id>OpenUI</id>
 		<version>1.0.2-beta</version>
-		<authors>OpenUI</authors>
-		<!--<owners></owners> -->
+		<authors>OpenUI Team</authors>
+		<owners>OpenUI Team</owners>
 		<licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
-		<repositoryUrl>https://github.com/openui-project/openui</repositoryUrl>
-		<iconUrl>https://github.com/openui-project/openui</iconUrl>
+		<projectUrl>https://github.com/openui-project/openui</projectUrl>
+		<!-- <iconUrl>https://raw.githubusercontent.com/openui-project/openui/main/assets/icon.png</iconUrl> -->
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>The OpenUI Project</description>
+		<description>OpenUI is a cross-platform UI toolkit for .NET developers. Build native mobile, desktop, and web apps with C# and XAML. It's open-source and free to use.</description>
+		<!-- <tags></tags> -->
 		<dependencies>
-			<dependency id="OpenUI.Graphics" version="1.0.1" />
+			<dependency id="OpenUI.Graphics" version="1.0.2-beta" />
 		</dependencies>
-		<!-- <copyright />
-		<tags /> -->
 	</metadata>
 	<files>
 		<file src="README.md" target="" />
