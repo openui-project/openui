@@ -6,9 +6,6 @@ using System.Runtime.InteropServices;
 
 namespace OpenUI
 {
-    internal struct TextProperties {
-    }
-
     /// <summary>
 	/// The <c>GameWindow</c> class represents the main window of the application, acting as the primary container 
 	/// for rendering and user interaction. It manages the window's size, position, and overall layout, handling 
@@ -16,9 +13,13 @@ namespace OpenUI
 	/// for rendering graphical content and serves as the central interface between the application and the user.
 	/// </summary>
     public class GameWindow
-    {
+    {   
         private Form form;
-        private TextProperties textProperties;
+
+        private string displayText;
+        private Point textPosition = new Point(50, 50);
+        private Font font;
+        private Brush textBrush = new SolidBrush(Color.White);
 
         public GameWindow(int width, int height, string title)
         {
@@ -34,16 +35,12 @@ namespace OpenUI
 
         public void DrawText(string text, int posX, int posY, int fontSize, Color color)
         {
-            using (Graphics g = form.CreateGraphics())
-            {
-                using (Font font = new Font("Arial", fontSize))
-                {
-                    using (Brush brush = new SolidBrush(color))
-                    {
-                        g.DrawString(text, font, brush, posX, posY);
-                    }
-                }
-            }
+            displayText = text;
+            font = new Font("Arial", fontSize);
+            textPosition = new Point(posX, posY);
+            textBrush = new SolidBrush(color);
+
+            form.Invalidate(); // Trigger repaint
         }
 
         public void Show()
@@ -55,7 +52,15 @@ namespace OpenUI
         // Private methods
         private void OnPaint(object sender, PaintEventArgs e)
         {
-            DrawText("Hello, World", 50, 50, 12, Color.White);
+            DrawText(e.Graphics);
+        }
+
+        private void DrawText(Graphics graphics)
+        {
+            graphics.DrawString(displayText, font, textBrush, new Point(50, 50));
         }
     }
 }
+
+OpenUI.GameWindow game = new OpenUI.GameWindow(800, 600, "Simpile Example");
+game.DrawText("Hello, World!", 50, 50, 18)
