@@ -6,6 +6,9 @@ using System.Runtime.InteropServices;
 
 namespace OpenUI
 {
+    internal struct TextProperties {
+    }
+
     /// <summary>
 	/// The <c>GameWindow</c> class represents the main window of the application, acting as the primary container 
 	/// for rendering and user interaction. It manages the window's size, position, and overall layout, handling 
@@ -15,6 +18,7 @@ namespace OpenUI
     public class GameWindow
     {
         private Form form;
+        private TextProperties textProperties;
 
         public GameWindow(int width, int height, string title)
         {
@@ -25,6 +29,7 @@ namespace OpenUI
                 BackColor = Color.Black,
                 // StartPosition = FormStartPosition.CenterScreen,
             };
+            form.Paint += new PaintEventHandler(OnPaint);
         }
 
         public void DrawText(string text, int posX, int posY, int fontSize, Color color)
@@ -45,6 +50,12 @@ namespace OpenUI
         {
             form.Show();
             Application.Run(form);
+        }
+
+        // Private methods
+        private void OnPaint(object sender, PaintEventArgs e)
+        {
+            DrawText("Hello, World", 50, 50, 12, Color.White);
         }
     }
 }
