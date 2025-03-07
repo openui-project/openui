@@ -9,7 +9,7 @@
 		<projectUrl>https://github.com/openui-project/openui</projectUrl>
 		<!-- <iconUrl>https://raw.githubusercontent.com/openui-project/openui/main/assets/icon.png</iconUrl> -->
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>OpenUI is a cross-platform UI toolkit for .NET developers. Build native mobile, desktop, and web apps with C# and XAML. It's open-source and free to use.</description>
+		<description>OpenUI is a cross-platform UI toolkit for .NET developers. Build native mobile, desktop, and web apps with C#.</description>
 		<!-- <tags></tags> -->
 		<dependencies>
 			<dependency id="OpenUI.Graphics" version="1.0.2-beta" />

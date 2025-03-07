@@ -18,15 +18,9 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
-  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'unix'">
-    <PackageReference Include="OpenGL.Net" Version="0.8.4" />
-    <PackageReference Include="glfw-net" Version="3.3.1" />
-  </ItemGroup>
-
   <ItemGroup>
     <!-- <Compile Include="**\*.cs" Exclude="Platforms\**\*.cs" /> -->
 		<Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'" Include="Platforms\Windows\*.cs" />
-    <Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'unix'" Include="Platforms\Unix\*.cs" />
   </ItemGroup>
   
 </Project>
