@@ -61,6 +61,3 @@ namespace OpenUI
         }
     }
 }
-
-OpenUI.GameWindow game = new OpenUI.GameWindow(800, 600, "Simpile Example");
-game.DrawText("Hello, World!", 50, 50, 18)
