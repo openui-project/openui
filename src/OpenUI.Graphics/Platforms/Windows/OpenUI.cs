@@ -3,7 +3,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-
 namespace OpenUI
 {
     /// <summary>
@@ -28,7 +27,7 @@ namespace OpenUI
                 ClientSize = new Size(width, height),
                 Text = title,
                 BackColor = Color.Black,
-                // StartPosition = FormStartPosition.CenterScreen,
+                StartPosition = FormStartPosition.CenterScreen,
             };
             form.Paint += new PaintEventHandler(OnPaint);
         }
@@ -57,7 +56,7 @@ namespace OpenUI
 
         private void DrawText(Graphics graphics)
         {
-            graphics.DrawString(displayText, font, textBrush, new Point(50, 50));
+            graphics.DrawString(displayText, font, textBrush, textPosition);
         }
     }
 }
