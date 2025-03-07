@@ -1,5 +1,0 @@
-<Project>
-    <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'linux' OR $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'osx'">
-        <PackageReference Include="X11" Version="1.0.6" />
-    </ItemGroup>
-</Project>

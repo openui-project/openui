@@ -21,9 +21,6 @@
   <ItemGroup>
     <!-- <Compile Include="**\*.cs" Exclude="Platforms\**\*.cs" /> -->
 		<Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'" Include="Platforms\Windows\*.cs" />
-		<Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'linux'" Include="Platforms\Linux\*.cs" />
   </ItemGroup>
-  
-  <Import Project="./Build.props" />
   
 </Project>
