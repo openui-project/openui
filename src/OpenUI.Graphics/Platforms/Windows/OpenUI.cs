@@ -13,13 +13,13 @@ namespace OpenUI
 	/// for rendering graphical content and serves as the central interface between the application and the user.
 	/// </summary>
     public class GameWindow
-    {   
+    {
         private Form form;
 
         private string displayText;
-        private Point textPosition = new Point(50, 50);
+        private Point textPosition;
         private Font font;
-        private Brush textBrush = new SolidBrush(Color.White);
+        private Brush textBrush;
 
         public GameWindow(int width, int height, string title)
         {
