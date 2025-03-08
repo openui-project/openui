@@ -26,16 +26,18 @@ namespace OpenUI
             };
         }
 
-        public bool IsWindowReady
+        public void SetWindowOpacity(float opacity)
         {
-            get
-            {
-                return form.Visible && form.IsHandleCreated;
-            }
+            if (opacity < 0 || opacity > 1)
+                throw new ArgumentOutOfRangeException("opacity", "Opacity must be between 0 and 1.");
+
+            form.Opacity = opacity;
         }
 
         public void Show()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             form.Show();
             Application.Run(form);
         }
