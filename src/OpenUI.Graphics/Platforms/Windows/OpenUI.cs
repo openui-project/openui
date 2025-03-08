@@ -14,6 +14,7 @@ namespace OpenUI
     public class GameWindow
     {
         private Form form;
+        private ISound sound;
 
         public GameWindow(int width, int height, string title)
         {
@@ -26,18 +27,9 @@ namespace OpenUI
             };
         }
 
-        public void SetWindowOpacity(float opacity)
-        {
-            if (opacity < 0 || opacity > 1)
-                throw new ArgumentOutOfRangeException("opacity", "Opacity must be between 0 and 1.");
-
-            form.Opacity = opacity;
-        }
-
         public void Show()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
             form.Show();
             Application.Run(form);
         }
