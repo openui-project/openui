@@ -26,7 +26,7 @@ namespace OpenUI
             };
         }
 
-        public Vector2 GetWindowPosition() {
+        public Mathematics.Vector2 GetWindowPosition() {
             return new Vector2(window.Left, window.Top);
         }
 
