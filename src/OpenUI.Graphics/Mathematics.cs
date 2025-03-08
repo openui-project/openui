@@ -7,7 +7,7 @@ namespace OpenUI.Mathematics
     public unsafe class Vector2
     {
         public float X { get; set; }
-        public float Y { get; get; }
+        public float Y { get; set; }
 
         public Vector2(float x, float y)
         {
