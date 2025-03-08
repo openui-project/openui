@@ -26,6 +26,10 @@ namespace OpenUI
             };
         }
 
+        public Vector2 GetWindowPosition() {
+            return new Vector2(window.Left, window.Top);
+        }
+
         public void Show()
         {
             Application.EnableVisualStyles();
