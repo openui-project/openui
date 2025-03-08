@@ -15,11 +15,6 @@ namespace OpenUI
     {
         private Form form;
 
-        private string displayText;
-        private Point textPosition;
-        private Font font;
-        private Brush textBrush;
-
         public GameWindow(int width, int height, string title)
         {
             form = new Form
@@ -29,34 +24,20 @@ namespace OpenUI
                 BackColor = Color.Black,
                 StartPosition = FormStartPosition.CenterScreen,
             };
-            form.Paint += new PaintEventHandler(OnPaint);
         }
 
-        public void DrawText(string text, int posX, int posY, int fontSize, Color color)
+        public bool IsWindowReady
         {
-            displayText = text;
-            font = new Font("Arial", fontSize);
-            textPosition = new Point(posX, posY);
-            textBrush = new SolidBrush(color);
-
-            form.Invalidate(); // Trigger repaint
+            get
+            {
+                return form.Visible && form.IsHandleCreated;
+            }
         }
 
         public void Show()
         {
             form.Show();
             Application.Run(form);
-        }
-
-        // Private methods
-        private void OnPaint(object sender, PaintEventArgs e)
-        {
-            DrawText(e.Graphics);
-        }
-
-        private void DrawText(Graphics graphics)
-        {
-            graphics.DrawString(displayText, font, textBrush, textPosition);
         }
     }
 }
