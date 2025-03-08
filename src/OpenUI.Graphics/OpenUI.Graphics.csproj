@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFrameworks>net8.0</TargetFrameworks>
 		<!--<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows</TargetFrameworks> -->
-    <RootNamespace>OpenUI.Graphics</RootNamespace>
+    <!-- <RootNamespace>OpenUI.Graphics</RootNamespace> -->
     <Version>1.0.2-beta</Version>
     <Description>OpenUI.Graphics is the backend framework for OpenUI, handling rendering and graphical operations.</Description>
     <NoWarn>$(NoWarn);1591</NoWarn>
@@ -14,12 +14,13 @@
     <!-- <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion> -->
   </PropertyGroup>
 
-  <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">
-    <UseWindowsForms>true</UseWindowsForms>
-  </PropertyGroup>
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">
+    <!-- <UseWindowsForms>true</UseWindowsForms> -->
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
 
   <ItemGroup>
-    <!-- <Compile Include="**\*.cs" Exclude="Platforms\**\*.cs" /> -->
+    <!-- <Compile Include="**\*.cs" Exclude="Platforms\**\*.cs" />  -->
 		<Compile Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'" Include="Platforms\Windows\*.cs" />
   </ItemGroup>
   

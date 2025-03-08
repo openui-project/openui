@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-		<ProjectReference Include="..\..\src\OpenUI.Graphics\OpenUI.Graphics.csproj" />
+    <ProjectReference Include="..\..\src\OpenUI.Graphics\OpenUI.Graphics.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
