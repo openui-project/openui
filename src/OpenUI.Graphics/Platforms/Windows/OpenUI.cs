@@ -14,7 +14,6 @@ namespace OpenUI
     public class GameWindow
     {
         private Form form;
-        private ISound sound;
 
         public GameWindow(int width, int height, string title)
         {
