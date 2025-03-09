@@ -1,10 +1,10 @@
-<!-- <p align="center">
+<p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/openui-project/openui/main/assets/pygdk_logo_dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openui-project/openui/main/assets/pygdk_logo_light.png">
-    <img src="https://raw.githubusercontent.com/openui-project/openui/main/assets/pygdk_logo_light.png">
+    <!-- <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/openui-project/openui/main/assets/pygdk_logo_dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openui-project/openui/main/assets/pygdk_logo_light.png"> -->
+    <img src="https://raw.githubusercontent.com/openui-project/openui/main/assets/logo.png">
   </picture>
-</p> -->
+</p>
 
 # OpenUI
 
