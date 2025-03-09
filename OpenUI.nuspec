@@ -7,7 +7,7 @@
 		<owners>OpenUI Team</owners>
 		<licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
 		<projectUrl>https://github.com/openui-project/openui</projectUrl>
-		<!-- <iconUrl>https://raw.githubusercontent.com/openui-project/openui/main/assets/icon.png</iconUrl> -->
+		<iconUrl>https://raw.githubusercontent.com/openui-project/openui/refs/heads/main/assets/openui_128x128.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>OpenUI is a cross-platform UI toolkit for .NET developers. Build native mobile, desktop, and web apps with C#.</description>
 		<!-- <tags></tags> -->
