@@ -1,6 +1,5 @@
 using System;
 using System.Runtime.CompilerServices;
-using OpenUI.Mathematics;
 
 namespace OpenUI.Mathematics
 {
