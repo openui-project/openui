@@ -27,7 +27,7 @@ namespace OpenUI
         }
 
         public Mathematics.Vector2 GetWindowPosition() {
-            return new Vector2(window.Left, window.Top);
+            return new Mathematics.Vector2(form.Left, form.Top);
         }
         public void Show()
         {
