@@ -20,5 +20,5 @@ public static class Program
     }
 }
 ```
-> [!TIP]
-> Check out the **[official documentation](https://github.com/openui-project/openui/wiki)** for detailed usage, examples, and more.
+<!-- > [!TIP]
+> Check out the **[official documentation](https://github.com/openui-project/openui/wiki)** for detailed usage, examples, and more. -->
