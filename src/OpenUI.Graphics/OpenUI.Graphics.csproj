@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks></TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows</TargetFrameworks>
 		<RootNamespace>OpenUI.Graphics</RootNamespace>
     <Version>1.0.2-beta</Version>
@@ -14,7 +14,11 @@
 
     <!-- <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion> -->
     <!-- <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion> -->
-  </PropertyGroup>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
 
   <!-- <ItemGroup>
     <Compile Include="**\*.cs" Exclude="Platforms\**\*.cs" /> 
