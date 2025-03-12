@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2CD7DB39-769
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenUI.Graphics", "src\OpenUI.Graphics\OpenUI.Graphics.csproj", "{480C87B0-46D3-41CE-B40C-6A76E18A04BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenUI.Mathematics", "src\OpenUI.Mathematics\OpenUI.Mathematics.csproj", "{3C5E8C2F-B7B2-480C-9888-3FB595610961}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{480C87B0-46D3-41CE-B40C-6A76E18A04BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{480C87B0-46D3-41CE-B40C-6A76E18A04BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{480C87B0-46D3-41CE-B40C-6A76E18A04BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C5E8C2F-B7B2-480C-9888-3FB595610961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C5E8C2F-B7B2-480C-9888-3FB595610961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C5E8C2F-B7B2-480C-9888-3FB595610961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C5E8C2F-B7B2-480C-9888-3FB595610961}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{480C87B0-46D3-41CE-B40C-6A76E18A04BD} = {2CD7DB39-7692-4F17-8A0F-B5C48901A087}
+		{3C5E8C2F-B7B2-480C-9888-3FB595610961} = {2CD7DB39-7692-4F17-8A0F-B5C48901A087}
 	EndGlobalSection
 EndGlobal
