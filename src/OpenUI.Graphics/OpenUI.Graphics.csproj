@@ -1,7 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\OpenUI.Mathematics\OpenUI.Mathematics.csproj" />
+  </ItemGroup>
   <PropertyGroup>
     <TargetFrameworks></TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows</TargetFrameworks>
 		<RootNamespace>OpenUI.Graphics</RootNamespace>
     <Version>1.0.2-beta</Version>
     <Description>OpenUI.Graphics is the backend framework for OpenUI, handling rendering and graphical operations.</Description>
