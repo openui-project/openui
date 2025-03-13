@@ -1,0 +1,28 @@
+name: Deploy DocFX Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install DocFX
+        run: |
+          curl -L https://github.com/dotnet/docfx/releases/latest/download/docfx-linux-x64.zip -o docfx.zip
+          unzip docfx.zip -d docfx
+          chmod +x docfx/docfx
+
+      - name: Build site
+        run: docfx/docfx docfx.json
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: _site
