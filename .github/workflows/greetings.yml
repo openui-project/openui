@@ -1,0 +1,44 @@
+name: Greetings New Contributors
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  greet-new-contributor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet and label new contributor
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { data: user } = await github.rest.users.getByUsername({
+              username: context.actor
+            });
+            
+            if (user.public_repos + user.public_gists === 0) {
+              const issue_number = context.issue.number;
+              const owner = context.repo.owner;
+              const repo = context.repo.repo;
+
+              await github.rest.issues.addLabels({
+                owner,
+                repo,
+                issue_number,
+                labels: ['good first issue']
+              });
+              
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body: `👋 Welcome @${context.actor}! Thanks for contributing. We're glad to have you here! 🎉`
+              });
+            }
