@@ -28,6 +28,11 @@ namespace OpenUI
             form.Paint += OnPaint;
         }
 
+				public Mathematics.Vector2 GetWindowPosition() 
+				{
+					return new Mathematics.Vector2(form.Location.X, form.Location.Y);
+				}
+
         public void Show()
         {
             Application.EnableVisualStyles();
