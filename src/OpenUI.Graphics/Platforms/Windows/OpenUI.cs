@@ -14,7 +14,7 @@ namespace OpenUI
     {
         private Form form;
 
-        public Action<PaintEventArgs>? Paint;
+        //public Action<PaintEventArgs>? Paint;
 
         public GameWindow(int width, int height, string title)
         {
@@ -22,10 +22,10 @@ namespace OpenUI
             {
                 ClientSize = new Size(width, height),
                 Text = title,
-                BackColor = Color.Black,
                 StartPosition = FormStartPosition.CenterScreen,
             };
-            form.Paint += OnPaint;
+						SetTheme(Theme.System);
+						//form.Paint += OnPaint;
         }
 
 				public Mathematics.Vector2 GetWindowPosition() 
@@ -40,9 +40,9 @@ namespace OpenUI
             Application.Run(form);
         }
 
-        private void OnPaint(object sender, PaintEventArgs e)
+        /*private void OnPaint(object sender, PaintEventArgs e)
         {
             Paint?.Invoke(e);
-        }
+        }*/
     }
 }

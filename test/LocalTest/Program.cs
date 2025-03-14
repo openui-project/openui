@@ -1,13 +1,13 @@
 ﻿using System;
+using OpenUI;
 using OpenUI.Mathematics;
 
 namespace OpenUI {
     public static class Program {
+				private static GameWindow game = new GameWindow(800, 600, "Simpile Example");
         public static void Main(string[] args) {
-           var game = new GameWindow(800, 600, "Simpile Example");
-					 Vector2 pos = game.GetWindowPosition();
-					 Console.WrightLine(pos);
-           game.Show();
-        }
-    }
+					Console.WriteLine(pos);
+					 game.Show();
+				}
+		}
 }
