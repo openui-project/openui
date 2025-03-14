@@ -1,0 +1,49 @@
+name: Test Desktop UI for Linux and macOS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0'  # Change to your desired .NET version
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build the project
+        run: dotnet build --configuration Release
+
+      - name: Run UI tests
+        run: dotnet test --configuration Release
+        env:
+          DISPLAY: :99 # For Linux to set up a virtual display if needed
+          
+      - name: Run desktop UI application (Linux only)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get install -y xvfb  # Install X virtual framebuffer if needed
+          Xvfb :99 -screen 0 1280x1024x24 &  # Start the virtual display
+          export DISPLAY=:99
+          dotnet run --configuration Release  # Start the UI application for testing
+
+      # - name: Run desktop UI application (macOS only)
+      #   if: runner.os == 'macOS'
+      #   run: |
+      #     dotnet run --configuration Release  # Start the UI application for testing
