@@ -12,8 +12,13 @@
 		<description>OpenUI is a fast, lightweight, and portable C# library designed for building modern, interactive graphical user interfaces with simplicity and flexibility.</description>
 		<!-- <tags></tags> -->
 		<dependencies>
-			<dependency id="OpenUI.Graphics" version="1.0.2" />
-			<dependency id="OpenUI.Mathematics" version="1.0.0" />
+			<group targetFramework="net6.0-windows">
+				<dependency id="OpenUI.Native.Win32" version="1.0.0" />
+			</group>
+
+			<group targetFramework="net6.0-linux">
+				<dependency id="OpenUI.Native.Linux" version="1.0.0" />
+			</group>
 		</dependencies>
 	</metadata>
 	<files>
