@@ -2,7 +2,11 @@ using System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
 
-namespace OpenUI.Mathematics {
+using System;
+using System.Runtime.InteropServices;
+using System.Runtime.CompilerServices;
+
+namespace OpenUI {
     [Serializable]
     [StructLayout(LayoutKind.Sequential)]
     public struct Vector2 

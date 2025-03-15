@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="../Build.props" />
+
+	<PropertyGroup>
+		<TargetFrameworks>$(AllTargetFrameworks)</TargetFrameworks>
+		<RootNamespace>OpenUI</RootNamespace>
+		<Version>1.0.2</Version>
+		<Description>OpenUI is a fast, lightweight, and portable C# library designed for building modern, interactive graphical user interfaces with simplicity and flexibility.</Description>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(BuildingInsideVisualStudio)' != 'true'">
+		<ProjectReference Include="..\OpenUI.Native.Win32\OpenUI.Native.Win32.csproj" Condition="$(TargetFramework.Contains('-windows')) or !$(TargetFramework.Contains('-'))" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+	</ItemGroup>
+
+</Project>

@@ -1,17 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsApp">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <RootNamespace>OpenUI</RootNamespace>
-    <Version>1.0.0</Version>
-    <Description>OpenUI.Native.Win32 is the backend framework for OpenUI, specifically designed for Windows. It handles rendering and graphical operations."</Description>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
+	<Import Project="../Build.props" />
 
-  <ItemGroup>
-    <ProjectReference Include="..\OpenUI.Mathematics\OpenUI.Mathematics.csproj" />
-  </ItemGroup>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>$(AllTargetFrameworks)</TargetFrameworks>
+		<!-- <RootNamespace></RootNamespace> -->
+		<Version>1.0.2</Version>
+		<Description></Description>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
 
 </Project>

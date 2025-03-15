@@ -1,0 +1,19 @@
+<Project>
+	<PropertyGroup>
+		<IsWindows>$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))</IsWindows>
+		<IsLinux>$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))</IsLinux>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!-- <AllowUnsafeBlocks>true</AllowUnsafeBlocks> -->
+		<NoWarn>$(NoWarn);1591;0105;0660</NoWarn>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<AllTargetFrameworks>netstandard2.0;netstandard2.1</AllTargetFrameworks>
+		<AllTargetFrameworks Condition="$(IsWindows)">$(AllTargetFrameworks);net8.0-windows10.0.19041.0</AllTargetFrameworks>
+	</PropertyGroup>
+
+	<Import Project="./NuGet.props" />
+</Project>
