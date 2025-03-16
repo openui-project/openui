@@ -11,7 +11,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
 
-	<ItemGroup Condition="'$(BuildingInsideVisualStudio)' != 'true'">
+	<ItemGroup>
 		<ProjectReference Include="..\OpenUI.Native.Win32\OpenUI.Native.Win32.csproj" Condition="$(TargetFramework.Contains('-windows')) or !$(TargetFramework.Contains('-'))" />
 	</ItemGroup>
 
