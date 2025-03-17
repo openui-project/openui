@@ -1,12 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\OpenUI\OpenUI.csproj" />
+		<ProjectReference Include="..\..\src\OpenUI\OpenUI.csproj" />
+		<ProjectReference Include="..\..\src\OpenUI.Native.Win32\OpenUI.Native.Win32.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net8.0-windows</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+		<TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
   </PropertyGroup>

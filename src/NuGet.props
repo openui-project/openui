@@ -3,7 +3,6 @@
 	<PropertyGroup>
 
 		<PackageIcon>icon.png</PackageIcon>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
 
 		<RepositoryUrl>https://github.com/openui-project/openui</RepositoryUrl>
 

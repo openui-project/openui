@@ -3,16 +3,19 @@
 	<Import Project="../Build.props" />
 
 	<PropertyGroup>
-		<TargetFrameworks>$(AllTargetFrameworks)</TargetFrameworks>
+		<TargetFrameworks>$(SupportedFrameworks)</TargetFrameworks>
 		<RootNamespace>OpenUI</RootNamespace>
 		<Version>1.0.2</Version>
 		<Description>OpenUI is a fast, lightweight, and portable C# library designed for building modern, interactive graphical user interfaces with simplicity and flexibility.</Description>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591;0105;0660</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\OpenUI.Native.Win32\OpenUI.Native.Win32.csproj" Condition="$(TargetFramework.Contains('-windows')) or !$(TargetFramework.Contains('-'))" />
+		<!-- <ProjectReference Include="..\OpenUI.Native.Win32\OpenUI.Native.Win32.csproj" Condition="$(TargetFramework.Contains('-windows')) or !$(TargetFramework.Contains('-'))" /> -->
+		<PackageReference Include="OpenUI.Native.Win32" Version="1.0.0" Condition="$(TargetFramework.Contains('-windows'))" />
 	</ItemGroup>
 
 	<ItemGroup>

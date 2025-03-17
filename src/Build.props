@@ -6,13 +6,14 @@
 
 	<PropertyGroup>
 		<!-- <AllowUnsafeBlocks>true</AllowUnsafeBlocks> -->
-		<NoWarn>$(NoWarn);1591;0105;0660</NoWarn>
 		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<AllTargetFrameworks>netstandard2.0;netstandard2.1;</AllTargetFrameworks>
-		<AllTargetFrameworks Condition="$(IsWindows)">$(AllTargetFrameworks);net8.0-windows10.0.19041.0</AllTargetFrameworks>
+		<WindowsFrameworks Condition="$(IsWindows)">net6.0-windows10.0.19041.0;net8.0-windows10.0.19041.0</WindowsFrameworks>
+		<!-- <CoreFrameworks></CoreFrameworks> -->
+		<SupportedFrameworks>netstandard2.0;netstandard2.1;net8.0;net6.0</SupportedFrameworks>
+		<SupportedFrameworks Condition="$(IsWindows)">$(SupportedFrameworks);$(WindowsFrameworks)</SupportedFrameworks>	
 	</PropertyGroup>
 
 	<Import Project="./NuGet.props" />
