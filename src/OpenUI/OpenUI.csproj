@@ -14,8 +14,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<!-- <ProjectReference Include="..\OpenUI.Native.Win32\OpenUI.Native.Win32.csproj" Condition="$(TargetFramework.Contains('-windows')) or !$(TargetFramework.Contains('-'))" /> -->
-		<PackageReference Include="OpenUI.Native.Win32" Version="1.0.0" Condition="$(TargetFramework.Contains('-windows'))" />
+		<PackageReference Include="OpenUI.Native.Win32" Version="1.0.0" Condition="$(TargetFramework.Contains('-windows')) or !$(TargetFramework.Contains('-'))" />
 	</ItemGroup>
 
 	<ItemGroup>
