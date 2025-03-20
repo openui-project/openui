@@ -11,7 +11,7 @@
 
 	<PropertyGroup>
 		<WindowsFrameworks Condition="$(IsWindows)">net6.0-windows10.0.19041.0;net8.0-windows10.0.19041.0</WindowsFrameworks>
-		<CoreFrameworks>netstandard2.0;netstandard2.1;net8.0;net6.0</CoreFrameworks>
+		<CoreFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0</CoreFrameworks>
 		<SupportedFrameworks>$(CoreFrameworks)</SupportedFrameworks>
 		<SupportedFrameworks Condition="$(IsWindows)">$(SupportedFrameworks);$(WindowsFrameworks)</SupportedFrameworks>	
 	</PropertyGroup>

@@ -5,7 +5,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>$(SupportedFrameworks)</TargetFrameworks>
 		<RootNamespace>OpenUI</RootNamespace>
-		<Version>1.0.2</Version>
+		<Version>1.0.3-pre</Version>
 		<Description>OpenUI is a fast, lightweight, and portable C# library designed for building modern, interactive graphical user interfaces with simplicity and flexibility.</Description>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -14,7 +14,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="OpenUI.Native.Win32" Version="1.0.0" Condition="$(TargetFramework.Contains('-windows')) or !$(TargetFramework.Contains('-'))" />
+		<!-- <PackageReference Include="OpenUI.Native.Win32" Version="1.0.0" Condition="$(TargetFramework.Contains('-windows')) or !$(TargetFramework.Contains('-'))" /> -->
 	</ItemGroup>
 
 	<ItemGroup>
