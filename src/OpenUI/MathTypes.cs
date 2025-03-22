@@ -27,6 +27,6 @@ namespace OpenUI
 
 			// Overriden Methods
 			public override string ToString() => $"({X}, {Y})";
-			public override int GetHashCode() => HashCode.Combine(X, Y);
+			public override int GetHashCode() => (X, Y).GetHashCode();
 		}
 }

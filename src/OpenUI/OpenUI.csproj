@@ -12,11 +12,13 @@
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<NoWarn>$(NoWarn);1591;0105;0660</NoWarn>
 	</PropertyGroup>
-
+	
+	<!-- OpenUI Native Packages -->
 	<ItemGroup>
-		<!-- <PackageReference Include="OpenUI.Native.Win32" Version="1.0.0" Condition="$(TargetFramework.Contains('-windows')) or !$(TargetFramework.Contains('-'))" /> -->
+		<PackageReference Include="OpenUI.Native.Win32" Version="1.0.1-pre"  Condition="$(TargetFramework.Contains('-windows'))" />
 	</ItemGroup>
 
+	<!-- Global Packages -->
 	<ItemGroup>
 		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
 	</ItemGroup>
