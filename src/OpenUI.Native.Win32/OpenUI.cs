@@ -24,6 +24,11 @@ namespace OpenUI
 			};
 		}
 
+		public void SetWindowCaption(string title) 
+		{
+			form.Text = title;
+		}
+
 		public void Run()
 		{
 			Application.EnableVisualStyles();
