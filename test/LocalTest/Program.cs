@@ -1,4 +1,5 @@
-﻿using OpenUI;
+﻿using System;
+using OpenUI;
 
 public static class Program
 {
