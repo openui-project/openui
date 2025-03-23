@@ -23,11 +23,8 @@ namespace OpenUI
 				StartPosition = FormStartPosition.CenterScreen,
 			};
 		}
-
-		public void SetWindowCaption(string title) 
-		{
-			form.Text = title;
-		}
+		
+		public void SetWindowCaption(string title) => form.Text = title;
 
 		public void Run()
 		{
