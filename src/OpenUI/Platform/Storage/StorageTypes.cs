@@ -3,29 +3,23 @@ using System.IO;
 
 namespace OpenUI.Platform.Storage
 {
-	public class StorageObject : IStorageItem 
+	public class FileObject : IStorageItem
 	{
 		public string Name { get; private set; }
 		public string Path { get; private set; }
 		public bool IsFolder { get; private set; }
 
-		public StorageObject(string path) 
+		public FileObject(string path)
 		{
-			if (!this.Exists(path)){
+			Path = System.IO.Path.GetFullPath(path);
+			Name = System.IO.Path.GetFileName(path);
+			IsFolder = Directory.Exists(path);
+
+			if (!Exists())
 				throw new ArgumentException("Invalid file or folder path.", nameof(path));
-			} else {
-				Path = path;
-				Name = System.IO.Path.GetFileName(path);
-				IsFolder = Directory.Exists(path);
-			}
 		}
 
 		public bool Exists() => IsFolder ? Directory.Exists(Path) : File.Exists(Path);
-
-		private bool Exists(string path)
-		{
-			return File.Exists(path) || Directory.Exists(path);
-		}
 
 		public long GetSize()
 		{
@@ -43,3 +37,5 @@ namespace OpenUI.Platform.Storage
 		public void Dispose() { }
 	}
 }
+
+
