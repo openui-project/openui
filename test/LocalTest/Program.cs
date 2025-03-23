@@ -10,6 +10,7 @@ public static class Program
 			using (IStorageItem file = new StorageObject("test.txt")) 
 			{
 				Console.WriteLine($"File Exists: {file.Exists()}");
+				Console.WriteLine($"File Size: { file.GetSize() }");
 			}
 		}
 		catch (Exception ex)

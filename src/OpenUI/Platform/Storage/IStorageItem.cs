@@ -15,6 +15,9 @@ namespace OpenUI.Platform.Storage
     /// </summary>
 		string Path { get; }
 
+		/// <returns><c>True</c> if its a folder else returns <c>False</c></returns>
+		bool IsFolder { get; }
+
 		/// <summary>
     /// Gets the size of the storage item in bytes.
     /// </summary>
