@@ -1,12 +1,20 @@
 ﻿using System;
 using OpenUI;
+using OpenUI.Platform.Storage;
 
 public static class Program
 {
 	public static void Main(string[] args)
 	{
-		var game = new GameWindow(800, 600, "Simpile Example");
-		game.SetWindowCaption("Hello");
-		game.Run();
+		try {
+			using (IStorageItem file = new StorageObject("test.txt")) 
+			{
+				Console.WriteLine($"File Exists: {file.Exists()}");
+			}
+		}
+		catch (Exception ex)
+		{
+			Console.Error.WriteLine($"Error: {ex.Message}");
+		}
 	}
 }
