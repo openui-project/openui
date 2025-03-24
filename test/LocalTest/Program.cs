@@ -6,18 +6,27 @@ public static class Program
 {
 	public static void Main(string[] args)
 	{
+		FileStatus();
+		var game = new GameWindow(800, 600, "Simpile Example");
+		game.SetWindowCaption("Hello");
+		game.Run();
+	}
+
+	private static void FileStatus() 
+	{
 		try {
-			using (IStorageItem file = new FileObject("test.txt")) 
+			using (FileObject file = new FileObject("test.txt")) 
 			{
-				Console.WriteLine($"Name: {file.Name}");
-				Console.WriteLine($"Path: {file.Path}");
-				Console.WriteLine($"File Exists: {file.Exists()}");
-				Console.WriteLine($"File Size: { file.GetSize() }");
+				Utils.TraceLog(Utils.LogLevel.Info, "Name: {0}", file.Name);
+				Utils.TraceLog(Utils.LogLevel.Warning, "Path: {0}", file.Path);
+				Utils.TraceLog(Utils.LogLevel.Error, "File Exists: {0}", file.Exists());
+				Utils.TraceLog(Utils.LogLevel.Critical, "File Size: {0}", file.GetSize());
+				Utils.TraceLog(Utils.LogLevel.Info, "Hello, World!");
 			}
 		}
 		catch (Exception ex)
 		{
-			Console.Error.WriteLine($"Error: {ex.Message}");
+			Utils.TraceLog(Utils.LogLevel.Error, "Error: {0}", ex.Message);
 		}
 	}
 }
