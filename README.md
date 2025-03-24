@@ -4,7 +4,7 @@ OpenUI is a lightweight C# library for building modern, interactive graphical us
 
 <!-- ## **Installation**  -->
 
-## **Quick Started**
+## **Quick Setup**
 
 Here's a quick example demonstrating how to create a window:
 
