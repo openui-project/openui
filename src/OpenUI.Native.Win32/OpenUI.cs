@@ -4,13 +4,13 @@ using System.Windows.Forms;
 
 namespace OpenUI
 {
-  /// <summary>
+	/// <summary>
   /// The <c>GameWindow</c> class represents the main window of the application, acting as the primary container 
   /// for rendering and user interaction. It manages the window's size, position, and overall layout, handling 
   /// events such as resizing, input handling, and refreshing the display. This class provides the foundation 
   /// for rendering graphical content and serves as the central interface between the application and the user.
   /// </summary>
-	public class GameWindow
+	public partial class GameWindow
 	{
 		private Form form;
 
@@ -21,10 +21,21 @@ namespace OpenUI
 				ClientSize = new Size(width, height),
 				Text = title,
 				StartPosition = FormStartPosition.CenterScreen,
+				KeyPreview = true,
 			};
+
+			form.KeyDown += OnKeyDown;
 		}
-		
-		public void SetWindowCaption(string title) => form.Text = title;
+
+		/// <summary>
+		/// Triggers an event when a key is pressed.
+		/// </summary>
+		/// <code>
+		/// GameWindow game = new GameWindow(800, 600, "Simpile Example");
+		/// game.KeyPressed = (key) => Console.WriteLine($"Key Pressed: {key}");
+		/// game.Run()
+		/// </code>
+		public Action<Keys> KeyPressed;
 
 		public void Run()
 		{
@@ -32,5 +43,10 @@ namespace OpenUI
 			form.Show();
 			Application.Run(form);
 		}
+
+		private void OnKeyDown(object sender, KeyEventArgs e)
+    {
+        KeyPressed?.Invoke(e.KeyCode);
+    }
 	}
 }
