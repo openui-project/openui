@@ -1,6 +1,6 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="../Build.props" />
+  <Import Project="../Build.props" />
 
 	<PropertyGroup>
 		<TargetFrameworks>$(WindowsFrameworks)</TargetFrameworks>
@@ -11,6 +11,6 @@
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<NoWarn>$(NoWarn);1591;CA1416</NoWarn>
 		<UseWindowsForms>true</UseWindowsForms>
-	</PropertyGroup>
+  </PropertyGroup>
 
 </Project>

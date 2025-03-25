@@ -10,7 +10,7 @@ namespace OpenUI
   /// events such as resizing, input handling, and refreshing the display. This class provides the foundation 
   /// for rendering graphical content and serves as the central interface between the application and the user.
   /// </summary>
-	public partial class GameWindow
+	public class GameWindow
 	{
 		private Form form;
 
@@ -27,15 +27,22 @@ namespace OpenUI
 			form.KeyDown += OnKeyDown;
 		}
 
-		/// <summary>
-		/// Triggers an event when a key is pressed.
-		/// </summary>
-		/// <code>
-		/// GameWindow game = new GameWindow(800, 600, "Simpile Example");
-		/// game.KeyPressed = (key) => Console.WriteLine($"Key Pressed: {key}");
-		/// game.Run()
-		/// </code>
-		public Action<Keys> KeyPressed;
+    ~GameWindow() 
+    {
+      form.Close();
+    }
+
+    /// <summary>
+    /// Triggers an event when a key is pressed.
+    /// </summary>
+    /// <code>
+    /// GameWindow game = new GameWindow(800, 600, "Simpile Example");
+    /// 
+    /// game.KeyPressed = (key) => Console.WriteLine($"Key Pressed: {key}");
+    ///
+    /// game.Run()
+    /// </code>
+    public Action<Keys> KeyPressed;
 
 		public void Run()
 		{

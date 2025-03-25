@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<Import Project="../Build.props" />
 
@@ -15,7 +15,7 @@
 	
 	<!-- OpenUI Native Packages -->
 	<ItemGroup>
-		<PackageReference Include="OpenUI.Native.Win32" Version="1.0.1-pre"  Condition="$(TargetFramework.Contains('-windows'))" />
+    <PackageReference Include="OpenUI.Native.Win32" Version="1.0.1-pre"  Condition="$(TargetFramework.Contains('-windows'))" />
 	</ItemGroup>
 
 	<!-- Global Packages -->
