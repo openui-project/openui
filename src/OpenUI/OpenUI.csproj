@@ -5,11 +5,11 @@
 	<PropertyGroup>
 		<TargetFrameworks>$(SupportedFrameworks)</TargetFrameworks>
 		<RootNamespace>OpenUI</RootNamespace>
-		<Version>1.0.3-pre</Version>
+    <Version>1.0.3-pre.1</Version>
 		<Description>OpenUI is a fast, lightweight, and portable C# library designed for building modern, interactive graphical user interfaces with simplicity and flexibility.</Description>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- <GenerateAssemblyInfo>false</GenerateAssemblyInfo> -->
     <NoWarn>$(NoWarn);1591;0105;0660</NoWarn>
 	</PropertyGroup>
 	

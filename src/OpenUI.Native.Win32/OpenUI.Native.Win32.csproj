@@ -5,7 +5,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;$(WindowsFrameworks)</TargetFrameworks> 
     <!-- <RootNamespace></RootNamespace> -->
-    <Version>1.0.1-pre</Version>
+    <Version>1.0.1-pre.1</Version>
     <Description>OpenUI.Native.Win32 is the backend framework for OpenUI, specifically designed for Windows. It handles rendering and graphical operations.</Description>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\OpenUI\bin\$(Configuration)\netstandard2.0\OpenUI.dll" Pack="True" />
+    <None Include="..\OpenUI\bin\$(Configuration)\netstandard2.0\OpenUI.dll" PackagePath="runtime/OpenUI.dll" Pack="True" />
     <Reference Include="OpenUI">
       <HintPath>.\OpenUI.dll</HintPath>
     </Reference>
