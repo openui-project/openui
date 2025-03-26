@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E4D2BD7B-8BD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenUI", "src\OpenUI\OpenUI.csproj", "{75256C45-A645-4C85-A671-D63F0D488343}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenUI.Native.Win32", "src\OpenUI.Native.Win32\OpenUI.Native.Win32.csproj", "{757104E9-4CA1-499E-8D44-6B5E5CA3586F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{75256C45-A645-4C85-A671-D63F0D488343}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75256C45-A645-4C85-A671-D63F0D488343}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75256C45-A645-4C85-A671-D63F0D488343}.Release|Any CPU.Build.0 = Release|Any CPU
+		{757104E9-4CA1-499E-8D44-6B5E5CA3586F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{757104E9-4CA1-499E-8D44-6B5E5CA3586F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{757104E9-4CA1-499E-8D44-6B5E5CA3586F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{757104E9-4CA1-499E-8D44-6B5E5CA3586F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{75256C45-A645-4C85-A671-D63F0D488343} = {E4D2BD7B-8BD5-4D4F-B5EC-303BAA8F4265}
+		{757104E9-4CA1-499E-8D44-6B5E5CA3586F} = {E4D2BD7B-8BD5-4D4F-B5EC-303BAA8F4265}
 	EndGlobalSection
 EndGlobal

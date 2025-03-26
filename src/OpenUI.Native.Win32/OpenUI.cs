@@ -44,6 +44,8 @@ namespace OpenUI
     /// </code>
     public Action<Keys> KeyPressed;
 
+    public Vector2 GetWindowPosition() => new Vector2(form.Left, form.Right);
+
 		public void Run()
 		{
 			Application.EnableVisualStyles();

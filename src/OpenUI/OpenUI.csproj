@@ -10,17 +10,19 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<NoWarn>$(NoWarn);1591;0105;0660</NoWarn>
+    <NoWarn>$(NoWarn);1591;0105;0660</NoWarn>
 	</PropertyGroup>
 	
 	<!-- OpenUI Native Packages -->
 	<ItemGroup>
-    <PackageReference Include="OpenUI.Native.Win32" Version="1.0.1-pre"  Condition="$(TargetFramework.Contains('-windows'))" />
+    <ProjectReference Include="..\OpenUI.Native.Win32\OpenUI.Native.Win32.csproj" Condition="$(TargetFramework.Contains('-windows'))" />
 	</ItemGroup>
 
 	<!-- Global Packages -->
 	<ItemGroup>
 		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
 	</ItemGroup>
+	<ItemGroup>
+	  	</ItemGroup>
 
 </Project>

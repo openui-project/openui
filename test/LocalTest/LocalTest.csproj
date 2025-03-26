@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
 		<ProjectReference Include="..\..\src\OpenUI\OpenUI.csproj" />
-		<ProjectReference Include="..\..\src\OpenUI.Native.Win32\OpenUI.Native.Win32.csproj" />
+    <!-- <ProjectReference Include="..\..\src\OpenUI.Native.Win32\OpenUI.Native.Win32.csproj" /> -->
   </ItemGroup>
 
   <PropertyGroup>

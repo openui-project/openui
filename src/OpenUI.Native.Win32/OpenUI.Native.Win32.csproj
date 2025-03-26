@@ -1,16 +1,28 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <Import Project="../Build.props" />
 
-	<PropertyGroup>
-		<TargetFrameworks>$(WindowsFrameworks)</TargetFrameworks>
-		<!-- <RootNamespace></RootNamespace> -->
-		<Version>1.0.1-pre</Version>
-		<Description>OpenUI.Native.Win32 is the backend framework for OpenUI, specifically designed for Windows. It handles rendering and graphical operations.</Description>
-		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<NoWarn>$(NoWarn);1591;CA1416</NoWarn>
-		<UseWindowsForms>true</UseWindowsForms>
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;$(WindowsFrameworks)</TargetFrameworks> 
+    <!-- <RootNamespace></RootNamespace> -->
+    <Version>1.0.1-pre</Version>
+    <Description>OpenUI.Native.Win32 is the backend framework for OpenUI, specifically designed for Windows. It handles rendering and graphical operations.</Description>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591;CA1416</NoWarn>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RuntimeIdentifiers>win-x64;win-x86</RuntimeIdentifiers>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\OpenUI\bin\$(Configuration)\netstandard2.0\OpenUI.dll" Pack="True" />
+    <Reference Include="OpenUI">
+      <HintPath>.\OpenUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Windows.Forms" Version="4.0.0" />
+  </ItemGroup>
 
 </Project>
